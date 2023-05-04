@@ -5,11 +5,15 @@ import './App.css';
 function App() {
   
   return (
-    <div className="App">
+    <>
       <header>
-        
+        <a>Math trainer</a>
       </header>
-    </div>
+        <div className="task">
+          <a>56 + 19?</a>
+          <input defaultValue={"75"}/>
+        </div>
+    </>
   );
 }
 

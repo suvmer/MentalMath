@@ -4,6 +4,8 @@
   box-sizing: border-box;
   text-decoration: none;
   background-color: transparent;
+  font-size: 18px;
+  color: var(--onSecondary);
 }
 
 :root {
@@ -15,21 +17,78 @@
   --darkgray: rgb(141, 141, 141);
   --blue: rgb(83, 92, 215);
   --green: rgb(237, 189, 81);
+  --larger: 3rem;
   --large: 2rem;
   --big: 1.75rem;
   --mid: 1.5rem;
+  --premid: 1.25rem;
   --small: 1rem;
 
-  --black: #1F1B24;
-  --secondary: #1F1B24;
+  --black: rgb(18, 18, 18);
+  /*--secondary: rgba(31, 27, 36, 0.92);*/
+
+  --primary: #BB86FC;
+  --primaryVariant: #3700B3;
+  --secondary: #03DAC6;
+  --background: #121212;
+  --surface: #121212;
+  --error: #CF6679;
+  --onPrimary: #000000;
+  --onSecondary: #000000;
+  --onBackGround: #FFFFFF;
+  --onSurface: #FFFFFF;
+  --onSurfaceDark: rgba(255, 255, 255, 0.05);
+  --onError: #000000;
 }
 
 body {
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--background);
   height: 100vh;
 }
 header {
-  height: 100px;
-  background-color: var(--secondary);
+  background-color: var(--onSurfaceDark);
+  width: 100%;
+}
+header > a {
+  display: block;
+  padding: 20px 30px;
+  font-size: var(--premid);
+  color: var(--onSurface);
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.task {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: var(--onSurfaceDark);
+  border-radius: 55px;
+}
+.task a {
+  font-size: var(--larger);
+  color: var(--onSurface);
+}
+input {
+  text-align: center;
+  color: var(--primary);
+  outline: none;
+  border: none;
+  border-bottom: 5px solid var(--secondary);
+  border-image: linear-gradient(90deg, var(--primary), var(--primaryVariant));
+  border-image-slice: 1;
+
+  padding: 10px 0px;
+  width: auto;
+  font-size: var(--large);
 }
