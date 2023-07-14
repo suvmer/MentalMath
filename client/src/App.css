@@ -41,10 +41,14 @@
   --onError: #000000;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
   width: 100%;
   background-color: var(--background);
-  height: 100vh;
+  height: 100%;
 }
 header {
   background-color: var(--onSurfaceDark);
@@ -58,24 +62,24 @@ header > a {
 }
 #root {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 .task {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 500px;
+  width: 30rem;
+  height: 30rem;
   background-color: var(--onSurfaceDark);
   border-radius: 55px;
 }
-.task a {
+.task__title {
   font-size: var(--larger);
   color: var(--onSurface);
 }
@@ -91,4 +95,46 @@ input {
   padding: 10px 0px;
   width: auto;
   font-size: var(--large);
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: 2px solid var(--onSurface);
+  color: var(--onSurface);
+  cursor: pointer;
+}
+.button_small {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.button_offset {
+  margin-top: 2rem;
+}
+.button:hover{
+  background-color: rgb(255, 255, 255, 0.2);
+  transition: background-color 30ms linear;
+}
+.score {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.result {
+  padding: 2rem;
+  color: var(--onSurface);
+  font-size: 2rem;
+}
+.result__item {
+  padding: 0.3rem 0;
+  font-size: 1.5rem;
+  color: var(--onSurface);
+}
+.result__time {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
 }
